@@ -1,14 +1,14 @@
-import TopBanner, { TopBannerProps } from './TopBanner.tsx'
+import TopBanner, { TopBannerProps } from "./TopBanner.tsx";
 
 export interface Props {
-  topBanner: TopBannerProps
+  topBanner: TopBannerProps;
 }
 function NewHome(props: Props) {
   return (
-  <>
-    <TopBanner {...props.topBanner} />
-  </>
-  )
+    <>
+      <TopBanner {...props.topBanner} />
+    </>
+  );
 }
 
 export default NewHome;

@@ -18,7 +18,7 @@ export interface TopBannerProps {
   };
 }
 
-function TopBanner(props:  TopBannerProps ) {
+function TopBanner(props: TopBannerProps) {
   const { title, subtitle, image } = props;
   return (
     <div class="grid grid-cols-1 grid-rows-1">
@@ -42,9 +42,9 @@ function TopBanner(props:  TopBannerProps ) {
           <span class="text-white text-4xl">{title}</span>
         </h1>
         <div class="flex justify-end">
-        <h2 class="max-w-[70%]">
-          <span class="text-white text-sm">{subtitle}</span>
-        </h2>
+          <h2 class="max-w-[70%]">
+            <span class="text-white text-sm">{subtitle}</span>
+          </h2>
         </div>
       </div>
     </div>

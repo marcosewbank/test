@@ -90,6 +90,7 @@
               "deco-sites/new-monashees/sections/Header.tsx",
               "deco-sites/new-monashees/sections/Highlights.tsx",
               "deco-sites/new-monashees/sections/LinkTree.tsx",
+              "deco-sites/new-monashees/sections/NewHome.tsx",
               "deco-sites/new-monashees/sections/ProductDetails.tsx",
               "deco-sites/new-monashees/sections/ProductShelf.tsx",
               "deco-sites/new-monashees/sections/SearchResult.tsx",
@@ -6466,12 +6467,17 @@
     "ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9sb2FkZXJzL3VzZXIudHM=@User": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id"
+        },
         "email": {
           "type": "string",
           "title": "Email"
         }
       },
       "required": [
+        "id",
         "email"
       ],
       "title": "User"
@@ -7512,7 +7518,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@93b8c70f3e6e426e09703e95eaa189a4&Colors": {
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@981cc4baf9bcc428ce043b677abfc68d&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors"
@@ -7528,7 +7534,7 @@
           "required": []
         }
       ],
-      "title": "93b8c70f3e6e426e09703e95eaa189a4&Colors"
+      "title": "981cc4baf9bcc428ce043b677abfc68d&Colors"
     },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
       "type": "object",
@@ -7631,7 +7637,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@93b8c70f3e6e426e09703e95eaa189a4&Colors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@981cc4baf9bcc428ce043b677abfc68d&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8354,6 +8360,75 @@
       "required": [],
       "title": "deco-sites/new-monashees/components/ui/LinkTree.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvVG9wQmFubmVyLnRzeA==@TopBannerProps": {
+      "type": "object",
+      "properties": {
+        "matcher": {
+          "type": "string",
+          "description": "RegExp to enable this banner on the current URL. Use /feminino/* to display this banner on feminino category",
+          "title": "Matcher"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text to be rendered on top of the image",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text to be rendered on top of the image",
+          "title": "Subtitle"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "desktop": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Desktop"
+            },
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [
+            "desktop",
+            "mobile"
+          ],
+          "title": "Image"
+        }
+      },
+      "required": [
+        "matcher",
+        "image"
+      ],
+      "title": "TopBannerProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTmV3SG9tZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "topBanner": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvVG9wQmFubmVyLnRzeA==@TopBannerProps",
+          "title": "Top Banner"
+        }
+      },
+      "required": [
+        "topBanner"
+      ],
+      "title": "deco-sites/new-monashees/components/new-home/NewHome.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvcHJvZHVjdC9Qcm9kdWN0RGV0YWlscy50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -9000,7 +9075,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ef52652399efcf028b1edca4cf80cc7a": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@05b648bc2ffbe7186fd3f55bb11a2933|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9018,13 +9093,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|ef52652399efcf028b1edca4cf80cc7a"
+      "title": "05b648bc2ffbe7186fd3f55bb11a2933|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ef52652399efcf028b1edca4cf80cc7a",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@05b648bc2ffbe7186fd3f55bb11a2933|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -11036,6 +11111,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL05ld0hvbWUudHN4": {
+      "title": "deco-sites/new-monashees/sections/NewHome.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTmV3SG9tZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/new-monashees/sections/NewHome.tsx"
+          ],
+          "default": "deco-sites/new-monashees/sections/NewHome.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL1Byb2R1Y3REZXRhaWxzLnRzeA==": {
       "title": "deco-sites/new-monashees/sections/ProductDetails.tsx",
       "type": "object",
@@ -12315,6 +12411,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0xpbmtUcmVlLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL05ld0hvbWUudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL1Byb2R1Y3REZXRhaWxzLnRzeA=="

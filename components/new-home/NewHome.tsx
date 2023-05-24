@@ -1,15 +1,15 @@
 import TopBanner, { TopBannerProps } from "./TopBanner.tsx";
-import Card, { CardProps } from "./Card.tsx"
+import Card, { CardProps } from "./Card.tsx";
 
 export interface Props {
   topBanner: TopBannerProps;
-  cardProps: CardProps[]; 
+  cardProps: CardProps[];
 }
 function NewHome(props: Props) {
   return (
     <>
       <TopBanner {...props.topBanner} />
-        {props?.cardProps?.map((card:CardProps ) => (<Card {...card} />))}   
+      {props?.cardProps?.map((card: CardProps) => <Card {...card} />)}
     </>
   );
 }

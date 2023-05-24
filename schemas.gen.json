@@ -8416,16 +8416,115 @@
       ],
       "title": "TopBannerProps"
     },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardContent": {
+      "type": "object",
+      "properties": {
+        "sectionBackground": {
+          "type": "string",
+          "description": "card section background",
+          "title": "Section Background"
+        },
+        "text": {
+          "type": "string",
+          "description": "text card",
+          "title": "Text"
+        },
+        "cta": {
+          "type": "string",
+          "description": "text cta",
+          "title": "Cta"
+        },
+        "backgroundColorContent": {
+          "type": "string",
+          "description": "card content background",
+          "title": "Background Color Content"
+        },
+        "left": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "image orientation desktop",
+          "title": "Left"
+        },
+        "top": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "image orientation mobile",
+          "title": "Top"
+        }
+      },
+      "required": [
+        "sectionBackground",
+        "text",
+        "cta",
+        "backgroundColorContent"
+      ],
+      "title": "CardContent"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "object",
+          "properties": {
+            "desktop": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Desktop"
+            },
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [
+            "desktop",
+            "mobile"
+          ],
+          "title": "Image"
+        },
+        "card": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardContent",
+          "title": "Card"
+        }
+      },
+      "required": [
+        "image",
+        "card"
+      ],
+      "title": "CardProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps"
+      },
+      "title": "CardProps[]"
+    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTmV3SG9tZS50c3g=@Props": {
       "type": "object",
       "properties": {
         "topBanner": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvVG9wQmFubmVyLnRzeA==@TopBannerProps",
           "title": "Top Banner"
+        },
+        "cardProps": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps[]",
+          "title": "Card Props"
         }
       },
       "required": [
-        "topBanner"
+        "topBanner",
+        "cardProps"
       ],
       "title": "deco-sites/new-monashees/components/new-home/NewHome.tsx@Props"
     },

@@ -88,6 +88,7 @@ export default function BannnerGrid({
   borderRadius,
   banners = [],
 }: Props) {
+
   return (
     <section class="container w-full px-4 md:px-0 mx-auto">
       {title &&

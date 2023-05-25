@@ -31,13 +31,13 @@ export interface CardContent {
 function Card(props: CardProps) {
   return (
     <section
-      class="p-4 pb-24"
+      class="px-8 h-screen"
       style={props.card.sectionBackground
         ? { backgroundColor: `${props.card.sectionBackground}` }
         : undefined}
     >
       <div>
-        <p class="text-sm text-color-card">{props.card.text}</p>
+        <p class="text-sm text-color-card mt-4">{props.card.text}</p>
         <button class="text-color-card uppercase text-xs mt-2.5">
           {props.card.cta}
         </button>

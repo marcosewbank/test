@@ -1,6 +1,7 @@
 import TopBanner, { TopBannerProps } from "./TopBanner.tsx";
 import Card, { CardProps } from "./Card.tsx";
 import Companies, { CompanyProps } from "./Companies.tsx";
+import Footer, { FooterProps } from "./Footer.tsx";
 
 import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
@@ -11,6 +12,7 @@ export interface Props {
   topBanner: TopBannerProps;
   cardProps: CardProps[];
   companyProps: CompanyProps[];
+  footerProps: FooterProps;
 }
 
 function Dots({ cardProps }: { cardProps: CardProps[] }) {
@@ -63,6 +65,7 @@ function NewHome(props: Props) {
           <Companies {...companyProps} />
         ))}
       </div>
+      <Footer {...props.footerProps}/>
     </section>
   );
 }

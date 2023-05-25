@@ -3,7 +3,9 @@ import Image from "deco-sites/std/components/Image.tsx";
 
 export interface CompanyProps {
   logo: {
+  /** @description Logo company */
     mobile: LiveImage;
+      /** @description Image's alt */
     alt?: string;
   };
 }

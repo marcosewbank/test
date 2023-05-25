@@ -8546,6 +8546,46 @@
       },
       "title": "CompanyProps[]"
     },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvRm9vdGVyLnRzeA==@FooterProps": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title Footer",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "subTitle Footer",
+          "title": "Subtitle"
+        },
+        "description": {
+          "type": "string",
+          "description": "description Footer",
+          "title": "Description"
+        },
+        "logoFooter": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "logo Footer",
+          "title": "Logo Footer"
+        },
+        "alt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "logo Footer",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "description",
+        "logoFooter"
+      ],
+      "title": "FooterProps"
+    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTmV3SG9tZS50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -8560,12 +8600,17 @@
         "companyProps": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps[]",
           "title": "Company Props"
+        },
+        "footerProps": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvRm9vdGVyLnRzeA==@FooterProps",
+          "title": "Footer Props"
         }
       },
       "required": [
         "topBanner",
         "cardProps",
-        "companyProps"
+        "companyProps",
+        "footerProps"
       ],
       "title": "deco-sites/new-monashees/components/new-home/NewHome.tsx@Props"
     },

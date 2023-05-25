@@ -35,7 +35,11 @@ function TopBanner(props: TopBannerProps) {
           height={200}
           media="(min-width: 767px)"
         />
-        <img class="w-full h-full" src={image.desktop} alt={image.alt ?? title} />
+        <img
+          class="w-full h-full"
+          src={image.desktop}
+          alt={image.alt ?? title}
+        />
       </Picture>
       <div class="container flex flex-col justify-evenly max-h-[70%] max-w-[80%] items-start col-start-1 col-span-1 row-start-1 row-span-1 w-full">
         <h1>

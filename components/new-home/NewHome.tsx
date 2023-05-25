@@ -65,7 +65,7 @@ function NewHome(props: Props) {
           <Companies {...companyProps} />
         ))}
       </div>
-      <Footer {...props.footerProps}/>
+      <Footer {...props.footerProps} />
     </section>
   );
 }

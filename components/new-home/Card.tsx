@@ -31,7 +31,7 @@ export interface CardContent {
 function Card(props: CardProps) {
   return (
     <section
-      class="p-4"
+      class="p-4 pb-24"
       style={props.card.sectionBackground
         ? { backgroundColor: `${props.card.sectionBackground}` }
         : undefined}

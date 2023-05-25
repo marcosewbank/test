@@ -27,7 +27,7 @@ function Dots({ cardProps }: { cardProps: CardProps[] }) {
           `,
         }}
       />
-      <ul class="carousel justify-center col-span-full gap-1 z-10 row-start-4">
+      <ul class="carousel justify-center col-span-full gap-1 z-10 row-start-4 absolute bottom-5 left-1/2 translate-x-[-50%]">
         {cardProps?.map((_, index) => (
           <li class="carousel-item">
             <Slider.Dot index={index}>
@@ -47,7 +47,7 @@ function NewHome(props: Props) {
   return (
     <section>
       <TopBanner {...props.topBanner} />
-      <div id={id}>
+      <div id={id} class="relative">
         <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">
           {props?.cardProps?.map((card: CardProps, index) => (
             <Slider.Item index={index} class="carousel-item w-full">
@@ -58,7 +58,7 @@ function NewHome(props: Props) {
         <Dots cardProps={props.cardProps} />
         <SliderJS rootId={id} infinite />
       </div>
-      <div class="bg-black grid grid-cols-3 gap-2 py-10">
+      <div class="bg-black grid grid-cols-3 gap-2 p-10">
         {props.companyProps?.map((companyProps: CompanyProps) => (
           <Companies {...companyProps} />
         ))}

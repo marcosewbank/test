@@ -30,6 +30,9 @@ export default {
       center: true,
     },
     extend: {
+      colors: {
+        'color-card': '#9e9f9f',
+      },
       animation: {
         "slide-left": "slide-left-frame 0.4s ease normal",
         "slide-right": "slide-right-frame 0.4s ease normal",

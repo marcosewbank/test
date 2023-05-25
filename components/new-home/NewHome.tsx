@@ -1,5 +1,6 @@
 import TopBanner, { TopBannerProps } from "./TopBanner.tsx";
 import Card, { CardProps } from "./Card.tsx";
+import Companies, { CompanyProps } from "./Companies.tsx";
 
 import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
@@ -9,6 +10,7 @@ import { useId } from "preact/hooks";
 export interface Props {
   topBanner: TopBannerProps;
   cardProps: CardProps[];
+  companyProps: CompanyProps[];
 }
 
 function Dots({ cardProps }: { cardProps: CardProps[] }) {
@@ -43,7 +45,7 @@ function Dots({ cardProps }: { cardProps: CardProps[] }) {
 function NewHome(props: Props) {
   const id = useId();
   return (
-    <>
+    <section>
       <TopBanner {...props.topBanner} />
       <div id={id}>
         <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">
@@ -56,7 +58,12 @@ function NewHome(props: Props) {
         <Dots cardProps={props.cardProps} />
         <SliderJS rootId={id} infinite />
       </div>
-    </>
+      <div class="bg-black grid grid-cols-3 gap-2 py-10">
+        {props.companyProps?.map((companyProps: CompanyProps) => (
+          <Companies {...companyProps} />
+        ))}
+      </div>
+    </section>
   );
 }
 

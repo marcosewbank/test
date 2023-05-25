@@ -8510,6 +8510,42 @@
       },
       "title": "CardProps[]"
     },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "object",
+          "properties": {
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [
+            "mobile"
+          ],
+          "title": "Logo"
+        }
+      },
+      "required": [
+        "logo"
+      ],
+      "title": "CompanyProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps"
+      },
+      "title": "CompanyProps[]"
+    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTmV3SG9tZS50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -8520,11 +8556,16 @@
         "cardProps": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps[]",
           "title": "Card Props"
+        },
+        "companyProps": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps[]",
+          "title": "Company Props"
         }
       },
       "required": [
         "topBanner",
-        "cardProps"
+        "cardProps",
+        "companyProps"
       ],
       "title": "deco-sites/new-monashees/components/new-home/NewHome.tsx@Props"
     },

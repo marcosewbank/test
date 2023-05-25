@@ -37,11 +37,11 @@ function TopBanner(props: TopBannerProps) {
         />
         <img class="w-full" src={image.desktop} alt={image.alt ?? title} />
       </Picture>
-      <div class="container flex flex-col mt-14 max-w-[80%] items-start col-start-1 col-span-1 row-start-1 row-span-1 w-full">
+      <div class="container flex flex-col justify-evenly max-h-[70%] max-w-[80%] items-start col-start-1 col-span-1 row-start-1 row-span-1 w-full">
         <h1>
           <span class="text-white text-4xl">{title}</span>
         </h1>
-        <div class="flex justify-end mt-5">
+        <div class="flex justify-end">
           <h2 class="max-w-[70%]">
             <span class="text-white text-sm">{subtitle}</span>
           </h2>

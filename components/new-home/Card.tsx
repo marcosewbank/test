@@ -32,11 +32,9 @@ function Card(props: CardProps) {
   return (
     <section
       class="p-4"
-      style={
-        props.card.sectionBackground
-          ? { backgroundColor: `${props.card.sectionBackground}` }
-          : undefined
-      }
+      style={props.card.sectionBackground
+        ? { backgroundColor: `${props.card.sectionBackground}` }
+        : undefined}
     >
       <div>
         <p class="text-sm text-color-card">{props.card.text}</p>

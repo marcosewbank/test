@@ -30,7 +30,8 @@ export interface CardContent {
 
 function Card(props: CardProps) {
   return (
-    <section class="p-4"
+    <section
+      class="p-4"
       style={
         props.card.sectionBackground
           ? { backgroundColor: `${props.card.sectionBackground}` }
@@ -39,7 +40,9 @@ function Card(props: CardProps) {
     >
       <div>
         <p class="text-sm text-color-card">{props.card.text}</p>
-        <button class="text-color-card uppercase text-xs mt-2.5">{props.card.cta}</button>
+        <button class="text-color-card uppercase text-xs mt-2.5">
+          {props.card.cta}
+        </button>
       </div>
       <div>
         <Picture preload class="">

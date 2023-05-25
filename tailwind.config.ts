@@ -31,7 +31,8 @@ export default {
     },
     extend: {
       colors: {
-        'color-card': '#9e9f9f',
+        "color-card": "#9e9f9f",
+        "dot": "#b7b7b7"
       },
       animation: {
         "slide-left": "slide-left-frame 0.4s ease normal",

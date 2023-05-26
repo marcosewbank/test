@@ -25,7 +25,7 @@ export interface NavItem {
   };
 }
 
-export interface Props {
+export interface HeaderProps {
   alerts: string[];
   /** @title Search Bar */
   searchbar?: SearchbarProps;
@@ -49,25 +49,22 @@ export interface Props {
 
 function Header(
   {
-    alerts,
     searchbar: _searchbar,
     products,
     navItems = [],
     suggestions,
-  }: Props,
+  }: HeaderProps,
 ) {
   const searchbar = { ..._searchbar, products, suggestions };
   return (
     <>
-      <header style={{ height: headerHeight }}>
-        <div class="bg-base-100 fixed w-full z-50">
-          <Alert alerts={alerts} />
-          <Navbar items={navItems} searchbar={searchbar} />
+      <header>
+        <div class="w-full z-50">
+          <Navbar items={navItems} />
         </div>
 
         <Modals
           menu={{ items: navItems }}
-          searchbar={searchbar}
         />
       </header>
     </>

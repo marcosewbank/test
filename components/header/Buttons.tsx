@@ -40,7 +40,7 @@ function MenuButton() {
         displayMenu.value = true;
       }}
     >
-      <Icon id="Bars3" width={20} height={20} strokeWidth={0.01} />
+      <Icon id="Bars3" width={32} height={32} strokeWidth={0.01} />
     </Button>
   );
 }
@@ -90,14 +90,14 @@ function CartButton() {
   );
 }
 
-function Buttons({ variant }: { variant: "cart" | "search" | "menu" }) {
-  if (variant === "cart") {
+function Buttons({ variant }: { variant: "menu" }) {
+/*   if (variant === "cart") {
     return <CartButton />;
   }
 
   if (variant === "search") {
     return <SearchButton />;
-  }
+  } */
 
   if (variant === "menu") {
     return <MenuButton />;

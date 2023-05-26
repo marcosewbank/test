@@ -22,7 +22,7 @@ function Modals({ menu, searchbar }: Props) {
     <>
       <Modal
         title="Menu"
-        mode="sidebar-left"
+        mode="center"
         loading="lazy"
         open={displayMenu.value}
         onClose={() => {

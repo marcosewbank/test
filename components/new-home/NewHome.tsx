@@ -2,6 +2,7 @@ import TopBanner, { TopBannerProps } from "./TopBanner.tsx";
 import Card, { CardProps } from "./Card.tsx";
 import Companies, { CompanyProps } from "./Companies.tsx";
 import Footer, { FooterProps } from "./Footer.tsx";
+import Header, { HeaderProps } from "../header/Header.tsx"
 
 import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
@@ -9,6 +10,7 @@ import SliderJS from "$store/islands/SliderJS.tsx";
 import { useId } from "preact/hooks";
 
 export interface Props {
+  headerProps: HeaderProps;
   topBanner: TopBannerProps;
   cardProps: CardProps[];
   companyProps: CompanyProps[];
@@ -48,6 +50,7 @@ function NewHome(props: Props) {
   const id = useId();
   return (
     <section>
+      <Header {...props.headerProps}/>
       <TopBanner {...props.topBanner} />
       <div id={id} class="relative">
         <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">

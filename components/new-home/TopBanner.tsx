@@ -43,7 +43,7 @@ function TopBanner(props: TopBannerProps) {
       </Picture>
       <div class="container flex flex-col justify-evenly max-h-[70%] max-w-[80%] items-start col-start-1 col-span-1 row-start-1 row-span-1 w-full">
         <h1>
-          <span class="text-white text-4xl">{title}</span>
+          <p class="text-white text-4xl">{title}</p>
         </h1>
         <div class="flex justify-end">
           <h2 class="max-w-[70%]">

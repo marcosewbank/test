@@ -2,7 +2,7 @@ import TopBanner, { TopBannerProps } from "./TopBanner.tsx";
 import Card, { CardProps } from "./Card.tsx";
 import Companies, { CompanyProps } from "./Companies.tsx";
 import Footer, { FooterProps } from "./Footer.tsx";
-import Header, { HeaderProps } from "../header/Header.tsx"
+import Header, { HeaderProps } from "../header/Header.tsx";
 
 import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
@@ -50,9 +50,9 @@ function NewHome(props: Props) {
   const id = useId();
   return (
     <section>
-      <Header {...props.headerProps}/>
+      <Header {...props.headerProps} />
       <TopBanner {...props.topBanner} />
-      <div id={id} class="relative">
+      <div id={id} class="relative md:hidden">
         <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">
           {props?.cardProps?.map((card: CardProps, index) => (
             <Slider.Item index={index} class="carousel-item w-full">
@@ -60,10 +60,19 @@ function NewHome(props: Props) {
             </Slider.Item>
           ))}
         </Slider>
+        <div class="md:hidden">
         <Dots cardProps={props.cardProps} />
+        </div>
         <SliderJS rootId={id} infinite />
       </div>
-      <div class="bg-black grid grid-cols-3 gap-2 p-10">
+      <div class="max-md:hidden">
+        {props?.cardProps?.map((card: CardProps) => (
+          <div class="carousel-item w-full">
+            <Card {...card} />
+          </div>
+        ))}
+      </div>
+      <div class="bg-black grid grid-cols-3 gap-2 p-10 md:hidden">
         {props.companyProps?.map((companyProps: CompanyProps) => (
           <Companies {...companyProps} />
         ))}

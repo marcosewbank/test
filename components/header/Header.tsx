@@ -59,7 +59,7 @@ function Header(
   return (
     <>
       <header>
-        <div class="w-full z-50">
+        <div class=" md:flex md:justify-center">
           <Navbar items={navItems} />
         </div>
 

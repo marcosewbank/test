@@ -31,7 +31,7 @@ export interface CardContent {
 function Card(props: CardProps) {
   return (
     <section
-      class="px-8 h-screen"
+      class="px-8 h-screen md:flex md:p-0"
       style={props.card.sectionBackground
         ? { backgroundColor: `${props.card.sectionBackground}` }
         : undefined}
@@ -52,8 +52,8 @@ function Card(props: CardProps) {
           />
           <Source
             src={props.image.desktop}
-            width={1440}
-            height={200}
+            width={650}
+            height={510}
             media="(min-width: 767px)"
           />
           <img

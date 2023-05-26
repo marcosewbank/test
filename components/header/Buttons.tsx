@@ -91,7 +91,7 @@ function CartButton() {
 }
 
 function Buttons({ variant }: { variant: "menu" }) {
-/*   if (variant === "cart") {
+  /*   if (variant === "cart") {
     return <CartButton />;
   }
 

@@ -36,7 +36,7 @@ function TopBanner(props: TopBannerProps) {
           media="(min-width: 767px)"
         />
         <img
-          class="w-full h-full"
+          class="w-full h-full md:object-cover"
           src={image.desktop}
           alt={image.alt ?? title}
         />

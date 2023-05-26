@@ -11,9 +11,11 @@ function MenuItem({ item }: { item: INavItem }) {
       <div class="text-white">{item.label}</div>
       <div class="">
         <ul>
-   {/*        <li>
+          {
+            /*        <li>
             <a class="" href={item.href}>Ver todos</a>
-          </li> */}
+          </li> */
+          }
           {item.children?.map((node) => (
             <li>
               <MenuItem item={node} />
@@ -36,7 +38,8 @@ function Menu({ items }: Props) {
         ))}
       </ul>
 
-{/*       <ul class="flex flex-col py-2 bg-base-200">
+      {
+        /*       <ul class="flex flex-col py-2 bg-base-200">
         <li>
           <a
             class="flex items-center gap-4 px-4 py-2"
@@ -73,7 +76,8 @@ function Menu({ items }: Props) {
             <span class="text-sm">Minha conta</span>
           </a>
         </li>
-      </ul> */}
+      </ul> */
+      }
     </>
   );
 }

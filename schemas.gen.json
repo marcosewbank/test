@@ -8416,6 +8416,11 @@
       ],
       "title": "TopBannerProps"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardContent": {
       "type": "object",
       "properties": {
@@ -8425,13 +8430,21 @@
           "title": "Section Background"
         },
         "text": {
-          "type": "string",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
           "description": "text card",
           "title": "Text"
         },
+        "overlayColor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text cta",
+          "title": "Overlay Color"
+        },
         "cta": {
           "type": "string",
-          "description": "text cta",
+          "description": "Overlay css",
           "title": "Cta"
         },
         "backgroundColorContent": {
@@ -8446,14 +8459,6 @@
           ],
           "description": "image orientation desktop",
           "title": "Left"
-        },
-        "top": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "description": "image orientation mobile",
-          "title": "Top"
         }
       },
       "required": [
@@ -8463,51 +8468,6 @@
         "backgroundColorContent"
       ],
       "title": "CardContent"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
-      "type": "string",
-      "format": "html",
-      "title": "HTML"
-    },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTW9kYWwudHN4@ModalProps": {
-      "type": "object",
-      "properties": {
-        "modalImage": {
-          "type": "object",
-          "properties": {
-            "desktop": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-              "title": "Desktop"
-            },
-            "mobile": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-              "title": "Mobile"
-            },
-            "alt": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Alt"
-            }
-          },
-          "required": [],
-          "title": "Modal Image"
-        },
-        "content": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
-          "title": "Content"
-        },
-        "badge": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Badge"
-        }
-      },
-      "required": [],
-      "title": "ModalProps"
     },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps": {
       "type": "object",
@@ -8540,16 +8500,11 @@
         "card": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardContent",
           "title": "Card"
-        },
-        "modal": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTW9kYWwudHN4@ModalProps",
-          "title": "Modal"
         }
       },
       "required": [
         "image",
-        "card",
-        "modal"
+        "card"
       ],
       "title": "CardProps"
     },

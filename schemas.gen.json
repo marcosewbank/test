@@ -7518,7 +7518,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@981cc4baf9bcc428ce043b677abfc68d&Colors": {
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&d4b83a40500bb3374d01f5c541343acb": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors"
@@ -7534,7 +7534,7 @@
           "required": []
         }
       ],
-      "title": "981cc4baf9bcc428ce043b677abfc68d&Colors"
+      "title": "Colors&d4b83a40500bb3374d01f5c541343acb"
     },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
       "type": "object",
@@ -7637,7 +7637,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@981cc4baf9bcc428ce043b677abfc68d&Colors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&d4b83a40500bb3374d01f5c541343acb",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8464,6 +8464,51 @@
       ],
       "title": "CardContent"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTW9kYWwudHN4@ModalProps": {
+      "type": "object",
+      "properties": {
+        "modalImage": {
+          "type": "object",
+          "properties": {
+            "desktop": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Desktop"
+            },
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [],
+          "title": "Modal Image"
+        },
+        "content": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "title": "Content"
+        },
+        "badge": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Badge"
+        }
+      },
+      "required": [],
+      "title": "ModalProps"
+    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps": {
       "type": "object",
       "properties": {
@@ -8495,11 +8540,16 @@
         "card": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardContent",
           "title": "Card"
+        },
+        "modal": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTW9kYWwudHN4@ModalProps",
+          "title": "Modal"
         }
       },
       "required": [
         "image",
-        "card"
+        "card",
+        "modal"
       ],
       "title": "CardProps"
     },
@@ -9265,7 +9315,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@05b648bc2ffbe7186fd3f55bb11a2933|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|d066672075211fe27d122fbfbeae0150": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9283,13 +9333,13 @@
           ]
         }
       ],
-      "title": "05b648bc2ffbe7186fd3f55bb11a2933|WorkflowRef"
+      "title": "WorkflowRef|d066672075211fe27d122fbfbeae0150"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@05b648bc2ffbe7186fd3f55bb11a2933|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|d066672075211fe27d122fbfbeae0150",
           "title": "Workflow"
         },
         "id": {

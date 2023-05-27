@@ -1,6 +1,6 @@
 import type {
-  Image as LiveImage,
   HTML,
+  Image as LiveImage,
 } from "deco-sites/std/components/types.ts";
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import { ModalProps } from "./Modal.tsx";
@@ -39,11 +39,9 @@ function Card(props: CardProps) {
   return (
     <section
       class="px-8 h-screen md:flex md:p-0"
-      style={
-        props.card.sectionBackground
-          ? { backgroundColor: `${props.card.sectionBackground}` }
-          : undefined
-      }
+      style={props.card.sectionBackground
+        ? { backgroundColor: `${props.card.sectionBackground}` }
+        : undefined}
     >
       <div class="text-sm text-color-card mt-4">
         <p dangerouslySetInnerHTML={{ __html: props.card.text }} />

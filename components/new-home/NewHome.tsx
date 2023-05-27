@@ -61,7 +61,7 @@ function NewHome(props: Props) {
           ))}
         </Slider>
         <div class="md:hidden">
-        <Dots cardProps={props.cardProps} />
+          <Dots cardProps={props.cardProps} />
         </div>
         <SliderJS rootId={id} infinite />
       </div>

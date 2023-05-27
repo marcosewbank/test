@@ -1,5 +1,9 @@
-import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import type {
+  Image as LiveImage,
+  HTML,
+} from "deco-sites/std/components/types.ts";
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
+import { ModalProps } from "./Modal.tsx";
 
 export interface CardProps {
   image: {
@@ -11,6 +15,7 @@ export interface CardProps {
     alt?: string;
   };
   card: CardContent;
+  modal: ModalProps;
 }
 
 export interface CardContent {
@@ -29,15 +34,19 @@ export interface CardContent {
 }
 
 function Card(props: CardProps) {
+  console.log("🚀 ~ file: Card.tsx:49 ~ Card ~ props:", props);
+
   return (
     <section
       class="px-8 h-screen md:flex md:p-0"
-      style={props.card.sectionBackground
-        ? { backgroundColor: `${props.card.sectionBackground}` }
-        : undefined}
+      style={
+        props.card.sectionBackground
+          ? { backgroundColor: `${props.card.sectionBackground}` }
+          : undefined
+      }
     >
-      <div>
-        <p class="text-sm text-color-card mt-4">{props.card.text}</p>
+      <div class="text-sm text-color-card mt-4">
+        <p dangerouslySetInnerHTML={{ __html: props.card.text }} />
         <button class="text-color-card uppercase text-xs mt-2.5">
           {props.card.cta}
         </button>

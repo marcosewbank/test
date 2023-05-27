@@ -39,11 +39,11 @@ function Card(props: CardProps) {
     : "flex-col-reverse lg:flex-row-reverse";
 
   return (
-    <section class={`flex ${alignTextToLeft} md:max-w-[1170px] py-20`}>
+    <section class={`flex ${alignTextToLeft} md:max-w-[1170px] py-4  md:py-20`}>
       <div class="flex flex-col h-auto text-left text-sm text-color-card p-6 lg:p-16 relative z-50">
         {props.card?.overlayColor && (
           <div
-            class={`absolute w-[125%] h-full ${
+            class={`hidden md:flex absolute w-[125%] h-full ${
               props.card.left ? "lg:left-0" : "lg:right-0"
             } top-0 z-0`}
             style={{

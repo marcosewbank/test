@@ -1,6 +1,6 @@
 import type {
-  Image as LiveImage,
   HTML,
+  Image as LiveImage,
 } from "deco-sites/std/components/types.ts";
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 export interface CardProps {
@@ -39,7 +39,7 @@ function Card(props: CardProps) {
     : "flex-col-reverse lg:flex-row-reverse";
 
   return (
-    <section class={`flex ${alignTextToLeft} md:max-w-[1170px] p-10`}>
+    <section class={`flex ${alignTextToLeft} md:max-w-[1170px] py-20`}>
       <div class="flex flex-col h-auto text-left text-sm text-color-card p-6 lg:p-16 relative z-50">
         {props.card?.overlayColor && (
           <div

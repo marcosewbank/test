@@ -59,11 +59,9 @@ function NewHome(props: Props) {
             <Slider.Item
               index={index}
               class="carousel-item w-full flex justify-center"
-              style={
-                card?.card.sectionBackground
-                  ? { backgroundColor: `${card?.card.sectionBackground}` }
-                  : undefined
-              }
+              style={card?.card.sectionBackground
+                ? { backgroundColor: `${card?.card.sectionBackground}` }
+                : undefined}
             >
               <Card {...card} />
             </Slider.Item>
@@ -78,11 +76,9 @@ function NewHome(props: Props) {
         {props?.cardProps?.map((card: CardProps) => (
           <div
             class="carousel-item w-full flex justify-center"
-            style={
-              card?.card.sectionBackground
-                ? { backgroundColor: `${card?.card.sectionBackground}` }
-                : undefined
-            }
+            style={card?.card.sectionBackground
+              ? { backgroundColor: `${card?.card.sectionBackground}` }
+              : undefined}
           >
             <Card {...card} />
           </div>

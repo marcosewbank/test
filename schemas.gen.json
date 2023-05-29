@@ -90,6 +90,7 @@
               "deco-sites/new-monashees/sections/Header.tsx",
               "deco-sites/new-monashees/sections/Highlights.tsx",
               "deco-sites/new-monashees/sections/LinkTree.tsx",
+              "deco-sites/new-monashees/sections/NewHome.tsx",
               "deco-sites/new-monashees/sections/ProductDetails.tsx",
               "deco-sites/new-monashees/sections/ProductShelf.tsx",
               "deco-sites/new-monashees/sections/SearchResult.tsx",
@@ -6466,12 +6467,17 @@
     "ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9sb2FkZXJzL3VzZXIudHM=@User": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id"
+        },
         "email": {
           "type": "string",
           "title": "Email"
         }
       },
       "required": [
+        "id",
         "email"
       ],
       "title": "User"
@@ -7512,7 +7518,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@93b8c70f3e6e426e09703e95eaa189a4&Colors": {
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&d4b83a40500bb3374d01f5c541343acb": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors"
@@ -7528,7 +7534,7 @@
           "required": []
         }
       ],
-      "title": "93b8c70f3e6e426e09703e95eaa189a4&Colors"
+      "title": "Colors&d4b83a40500bb3374d01f5c541343acb"
     },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
       "type": "object",
@@ -7631,7 +7637,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@93b8c70f3e6e426e09703e95eaa189a4&Colors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&d4b83a40500bb3374d01f5c541343acb",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8045,166 +8051,6 @@
       "required": [],
       "title": "deco-sites/new-monashees/components/footer/Footer.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps": {
-      "type": "object",
-      "properties": {
-        "placeholder": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Placeholder",
-          "description": "Search bar default placeholder message",
-          "default": "What are you looking for?"
-        },
-        "action": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Page path",
-          "description": "When user clicks on the search button, navigate it to",
-          "default": "/s"
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Term name",
-          "description": "Querystring param used when navigating the user",
-          "default": "q"
-        },
-        "query": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Query"
-        }
-      },
-      "required": [],
-      "title": "EditableProps"
-    },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string",
-          "title": "Label"
-        },
-        "href": {
-          "type": "string",
-          "title": "Href"
-        },
-        "children": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "label": {
-                "type": "string",
-                "title": "Label"
-              },
-              "href": {
-                "type": "string",
-                "title": "Href"
-              },
-              "children": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "type": "string",
-                      "title": "Label"
-                    },
-                    "href": {
-                      "type": "string",
-                      "title": "Href"
-                    }
-                  },
-                  "required": [
-                    "label",
-                    "href"
-                  ]
-                },
-                "title": "Children"
-              }
-            },
-            "required": [
-              "label",
-              "href"
-            ]
-          },
-          "title": "Children"
-        },
-        "image": {
-          "type": "object",
-          "properties": {
-            "src": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-              "title": "Src"
-            },
-            "alt": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Alt"
-            }
-          },
-          "required": [],
-          "title": "Image"
-        }
-      },
-      "required": [
-        "label",
-        "href"
-      ],
-      "title": "NavItem"
-    },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem"
-      },
-      "title": "NavItem[]"
-    },
-    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "alerts": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "title": "Alerts"
-        },
-        "searchbar": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps",
-          "title": "Search Bar"
-        },
-        "navItems": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem[]",
-          "title": "Navigation items",
-          "description": "Navigation items used both on mobile and desktop menus"
-        },
-        "products": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Product[]|null",
-          "title": "Product suggestions",
-          "description": "Product suggestions displayed on search"
-        },
-        "suggestions": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Suggestion|null",
-          "title": "Enable Top Search terms"
-        }
-      },
-      "required": [
-        "alerts"
-      ],
-      "title": "deco-sites/new-monashees/components/header/Header.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvdWkvSGlnaGxpZ2h0cy50c3g=@Highlight": {
       "type": "object",
       "properties": {
@@ -8353,6 +8199,430 @@
       },
       "required": [],
       "title": "deco-sites/new-monashees/components/ui/LinkTree.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps": {
+      "type": "object",
+      "properties": {
+        "placeholder": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Placeholder",
+          "description": "Search bar default placeholder message",
+          "default": "What are you looking for?"
+        },
+        "action": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Page path",
+          "description": "When user clicks on the search button, navigate it to",
+          "default": "/s"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Term name",
+          "description": "Querystring param used when navigating the user",
+          "default": "q"
+        },
+        "query": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Query"
+        }
+      },
+      "required": [],
+      "title": "EditableProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "href": {
+          "type": "string",
+          "title": "Href"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "href": {
+                "type": "string",
+                "title": "Href"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "title": "Label"
+                    },
+                    "href": {
+                      "type": "string",
+                      "title": "Href"
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "href"
+                  ]
+                },
+                "title": "Children"
+              }
+            },
+            "required": [
+              "label",
+              "href"
+            ]
+          },
+          "title": "Children"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Src"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [],
+          "title": "Image"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ],
+      "title": "NavItem"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem"
+      },
+      "title": "NavItem[]"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@HeaderProps": {
+      "type": "object",
+      "properties": {
+        "alerts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Alerts"
+        },
+        "searchbar": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps",
+          "title": "Search Bar"
+        },
+        "navItems": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem[]",
+          "title": "Navigation items",
+          "description": "Navigation items used both on mobile and desktop menus"
+        },
+        "products": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Product[]|null",
+          "title": "Product suggestions",
+          "description": "Product suggestions displayed on search"
+        },
+        "suggestions": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Suggestion|null",
+          "title": "Enable Top Search terms"
+        }
+      },
+      "required": [
+        "alerts"
+      ],
+      "title": "HeaderProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvVG9wQmFubmVyLnRzeA==@TopBannerProps": {
+      "type": "object",
+      "properties": {
+        "matcher": {
+          "type": "string",
+          "description": "RegExp to enable this banner on the current URL. Use /feminino/* to display this banner on feminino category",
+          "title": "Matcher"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text to be rendered on top of the image",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text to be rendered on top of the image",
+          "title": "Subtitle"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "desktop": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Desktop"
+            },
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [
+            "desktop",
+            "mobile"
+          ],
+          "title": "Image"
+        }
+      },
+      "required": [
+        "matcher",
+        "image"
+      ],
+      "title": "TopBannerProps"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardContent": {
+      "type": "object",
+      "properties": {
+        "sectionBackground": {
+          "type": "string",
+          "description": "card section background",
+          "title": "Section Background"
+        },
+        "text": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "description": "text card",
+          "title": "Text"
+        },
+        "overlayColor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text cta",
+          "title": "Overlay Color"
+        },
+        "cta": {
+          "type": "string",
+          "description": "Overlay css",
+          "title": "Cta"
+        },
+        "backgroundColorContent": {
+          "type": "string",
+          "description": "card content background",
+          "title": "Background Color Content"
+        },
+        "left": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "image orientation desktop",
+          "title": "Left"
+        }
+      },
+      "required": [
+        "sectionBackground",
+        "text",
+        "cta",
+        "backgroundColorContent"
+      ],
+      "title": "CardContent"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "object",
+          "properties": {
+            "desktop": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Desktop"
+            },
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [
+            "desktop",
+            "mobile"
+          ],
+          "title": "Image"
+        },
+        "card": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardContent",
+          "title": "Card"
+        }
+      },
+      "required": [
+        "image",
+        "card"
+      ],
+      "title": "CardProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps"
+      },
+      "title": "CardProps[]"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "object",
+          "properties": {
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [
+            "mobile"
+          ],
+          "title": "Logo"
+        }
+      },
+      "required": [
+        "logo"
+      ],
+      "title": "CompanyProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps"
+      },
+      "title": "CompanyProps[]"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvRm9vdGVyLnRzeA==@FooterProps": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title Footer",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "subTitle Footer",
+          "title": "Subtitle"
+        },
+        "description": {
+          "type": "string",
+          "description": "description Footer",
+          "title": "Description"
+        },
+        "logoFooter": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "logo Footer",
+          "title": "Logo Footer"
+        },
+        "alt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "logo Footer",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "description",
+        "logoFooter"
+      ],
+      "title": "FooterProps"
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTmV3SG9tZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "headerProps": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@HeaderProps",
+          "title": "Header Props"
+        },
+        "topBanner": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvVG9wQmFubmVyLnRzeA==@TopBannerProps",
+          "title": "Top Banner"
+        },
+        "cardProps": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ2FyZC50c3g=@CardProps[]",
+          "title": "Card Props"
+        },
+        "companyProps": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvQ29tcGFuaWVzLnRzeA==@CompanyProps[]",
+          "title": "Company Props"
+        },
+        "footerProps": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvRm9vdGVyLnRzeA==@FooterProps",
+          "title": "Footer Props"
+        }
+      },
+      "required": [
+        "headerProps",
+        "topBanner",
+        "cardProps",
+        "companyProps",
+        "footerProps"
+      ],
+      "title": "deco-sites/new-monashees/components/new-home/NewHome.tsx@Props"
     },
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvcHJvZHVjdC9Qcm9kdWN0RGV0YWlscy50c3g=@Props": {
       "type": "object",
@@ -9000,7 +9270,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ef52652399efcf028b1edca4cf80cc7a": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|d066672075211fe27d122fbfbeae0150": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9018,13 +9288,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|ef52652399efcf028b1edca4cf80cc7a"
+      "title": "WorkflowRef|d066672075211fe27d122fbfbeae0150"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ef52652399efcf028b1edca4cf80cc7a",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|d066672075211fe27d122fbfbeae0150",
           "title": "Workflow"
         },
         "id": {
@@ -10976,11 +11246,6 @@
     "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0hlYWRlci50c3g=": {
       "title": "deco-sites/new-monashees/sections/Header.tsx",
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@Props"
-        }
-      ],
       "required": [
         "__resolveType"
       ],
@@ -11033,6 +11298,27 @@
             "deco-sites/new-monashees/sections/LinkTree.tsx"
           ],
           "default": "deco-sites/new-monashees/sections/LinkTree.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL05ld0hvbWUudHN4": {
+      "title": "deco-sites/new-monashees/sections/NewHome.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL2NvbXBvbmVudHMvbmV3LWhvbWUvTmV3SG9tZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/new-monashees/sections/NewHome.tsx"
+          ],
+          "default": "deco-sites/new-monashees/sections/NewHome.tsx"
         }
       }
     },
@@ -12315,6 +12601,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL0xpbmtUcmVlLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL05ld0hvbWUudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9uZXctbW9uYXNoZWVzL3NlY3Rpb25zL1Byb2R1Y3REZXRhaWxzLnRzeA=="

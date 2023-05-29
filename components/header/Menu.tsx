@@ -7,14 +7,15 @@ export interface Props {
 
 function MenuItem({ item }: { item: INavItem }) {
   return (
-    <div class="collapse collapse-plus">
-      <input type="checkbox" />
-      <div class="collapse-title">{item.label}</div>
-      <div class="collapse-content">
+    <div class="">
+      <div class="text-white">{item.label}</div>
+      <div class="">
         <ul>
-          <li>
-            <a class="underline text-sm" href={item.href}>Ver todos</a>
-          </li>
+          {
+            /*        <li>
+            <a class="" href={item.href}>Ver todos</a>
+          </li> */
+          }
           {item.children?.map((node) => (
             <li>
               <MenuItem item={node} />
@@ -29,15 +30,16 @@ function MenuItem({ item }: { item: INavItem }) {
 function Menu({ items }: Props) {
   return (
     <>
-      <ul class="px-4 flex-grow flex flex-col divide-y divide-base-200">
+      <ul class="flex flex-col items-center">
         {items.map((item) => (
-          <li>
+          <li class="mb-6 text-2xl">
             <MenuItem item={item} />
           </li>
         ))}
       </ul>
 
-      <ul class="flex flex-col py-2 bg-base-200">
+      {
+        /*       <ul class="flex flex-col py-2 bg-base-200">
         <li>
           <a
             class="flex items-center gap-4 px-4 py-2"
@@ -74,7 +76,8 @@ function Menu({ items }: Props) {
             <span class="text-sm">Minha conta</span>
           </a>
         </li>
-      </ul>
+      </ul> */
+      }
     </>
   );
 }

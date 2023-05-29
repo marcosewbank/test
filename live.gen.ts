@@ -28,16 +28,18 @@ import * as $$$$$$$$7 from "./sections/Footer.tsx";
 import * as $$$$$$$$8 from "./sections/CookieConsent.tsx";
 import * as $$$$$$$$9 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$10 from "./sections/Header.tsx";
-import * as $$$$$$$$11 from "./sections/ProductDetails.tsx";
-import * as $$$$$$$$12 from "./sections/Highlights.tsx";
-import * as $$$$$$$$13 from "./sections/WhatsApp.tsx";
-import * as $$$$$$$$14 from "./sections/Carousel.tsx";
+import * as $$$$$$$$11 from "./sections/NewHome.tsx";
+import * as $$$$$$$$12 from "./sections/ProductDetails.tsx";
+import * as $$$$$$$$13 from "./sections/Highlights.tsx";
+import * as $$$$$$$$14 from "./sections/WhatsApp.tsx";
+import * as $$$$$$$$15 from "./sections/Carousel.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
 import * as $live_invoke_key from "$live/routes/live/invoke/[...key].ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
 import * as $live_inspect from "$live/routes/live/inspect/[...block].ts";
+import * as $live_release from "$live/routes/live/release.ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
@@ -152,6 +154,7 @@ const manifest = {
     "./routes/live/invoke/[...key].ts": $live_invoke_key,
     "./routes/live/invoke/index.ts": $live_invoke,
     "./routes/live/previews/[...block].tsx": $live_previews,
+    "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
     "./routes/styles.css.ts": $$$$0,
   },
@@ -174,18 +177,19 @@ const manifest = {
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/new-monashees/sections/BannerGrid.tsx": $$$$$$$$4,
     "deco-sites/new-monashees/sections/BannerPLP.tsx": $$$$$$$$3,
-    "deco-sites/new-monashees/sections/Carousel.tsx": $$$$$$$$14,
+    "deco-sites/new-monashees/sections/Carousel.tsx": $$$$$$$$15,
     "deco-sites/new-monashees/sections/CookieConsent.tsx": $$$$$$$$8,
     "deco-sites/new-monashees/sections/DesignSystem.tsx": $$$$$$$$9,
     "deco-sites/new-monashees/sections/Features.tsx": $$$$$$$$2,
     "deco-sites/new-monashees/sections/Footer.tsx": $$$$$$$$7,
     "deco-sites/new-monashees/sections/Header.tsx": $$$$$$$$10,
-    "deco-sites/new-monashees/sections/Highlights.tsx": $$$$$$$$12,
+    "deco-sites/new-monashees/sections/Highlights.tsx": $$$$$$$$13,
     "deco-sites/new-monashees/sections/LinkTree.tsx": $$$$$$$$1,
-    "deco-sites/new-monashees/sections/ProductDetails.tsx": $$$$$$$$11,
+    "deco-sites/new-monashees/sections/NewHome.tsx": $$$$$$$$11,
+    "deco-sites/new-monashees/sections/ProductDetails.tsx": $$$$$$$$12,
     "deco-sites/new-monashees/sections/ProductShelf.tsx": $$$$$$$$6,
     "deco-sites/new-monashees/sections/SearchResult.tsx": $$$$$$$$5,
-    "deco-sites/new-monashees/sections/WhatsApp.tsx": $$$$$$$$13,
+    "deco-sites/new-monashees/sections/WhatsApp.tsx": $$$$$$$$14,
     "deco-sites/new-monashees/sections/WishlistGallery.tsx": $$$$$$$$0,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,

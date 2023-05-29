@@ -35,7 +35,7 @@ const sectionStyles = {
 const containerStyles = {
   "sidebar-right": "h-full w-full sm:max-w-lg",
   "sidebar-left": "h-full w-full sm:max-w-lg",
-  center: "",
+  center: "h-full w-full",
 };
 
 const Modal = ({
@@ -85,15 +85,21 @@ const Modal = ({
             containerStyles[mode]
           }`}
         >
-          <header class="flex px-4 py-6 justify-between items-center border-b border-base-200">
+          <header class="flex px-4 py-6 justify-between items-center bg-black">
             <h1>
-              <span class="font-medium text-2xl">{title}</span>
+              <span class="font-medium text-2xl"></span>
             </h1>
             <Button class="btn btn-ghost" onClick={onClose}>
-              <Icon id="XMark" width={20} height={20} strokeWidth={2} />
+              <Icon
+                class="text-white"
+                id="XMark"
+                width={32}
+                height={32}
+                strokeWidth={2}
+              />
             </Button>
           </header>
-          <div class="overflow-y-auto flex-grow flex flex-col">
+          <div class="overflow-y-auto flex-grow flex flex-col bg-black">
             {loading === "lazy" ? lazy.value && children : children}
           </div>
         </div>
